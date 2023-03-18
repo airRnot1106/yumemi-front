@@ -19,6 +19,16 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    /* typescript */
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
+        destructuredArrayIgnorePattern: '^_',
+      },
+    ],
     /* import */
     'simple-import-sort/imports': 'off',
     'simple-import-sort/exports': 'error',
