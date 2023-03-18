@@ -1,4 +1,10 @@
+'use client';
+
 import '@/app/globals.scss';
+
+import { Provider } from 'jotai';
+
+import { DebugAtoms } from '@/components/functional/DebugAtoms';
 
 export default function RootLayout({
   children,
@@ -12,7 +18,12 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Yumemi-Front</title>
       </head>
-      <body>{children}</body>
+      <body>
+        <Provider>
+          <DebugAtoms />
+          {children}
+        </Provider>
+      </body>
     </html>
   );
 }
