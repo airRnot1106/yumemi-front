@@ -1,0 +1,15 @@
+.module {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0.5rem 0.75rem;
+  user-select: none;
+  background-color: var(--c-neutral);
+}
+
+.content {
+  composes: text-sm from '@/styles/texts.module.scss';
+  color: var(--c-neutral-content);
+}
