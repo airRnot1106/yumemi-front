@@ -1,0 +1,13 @@
+.module {
+  display: grid;
+  place-items: center;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  background-color: var(--c-base-300);
+  border-radius: 1.5rem;
+}
+
+.text {
+  composes: text-xl from '@/styles/texts.module.scss';
+  font-weight: 600;
+}
