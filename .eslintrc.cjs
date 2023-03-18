@@ -19,6 +19,24 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    /* eslint */
+    'array-callback-return': 'error',
+    'no-constructor-return': 'error',
+    'no-new-native-nonconstructor': 'error',
+    'no-promise-executor-return': 'error',
+    'no-self-compare': 'error',
+    'no-template-curly-in-string': 'error',
+    'no-unreachable-loop': 'error',
+    'eqeqeq': 'error',
+    'no-console': 'warn',
+    'no-eval': 'error',
+    'no-labels': 'error',
+    'no-lonely-if': 'error',
+    'no-var': 'error',
+    'prefer-const': 'error',
+    'prefer-spread': 'error',
+    'spaced-comment': ['error', 'always', { markers: ['/'] }],
+    'yoda': 'error',
     /* typescript */
     '@typescript-eslint/no-unused-vars': [
       'warn',
