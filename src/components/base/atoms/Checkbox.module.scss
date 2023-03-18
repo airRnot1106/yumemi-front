@@ -1,0 +1,9 @@
+.checkbox {
+  margin: 0 0.5rem 0 0;
+  transform: scale(2);
+  accent-color: var(--c-primary);
+}
+
+.label {
+  composes: text-xl from '@/styles/texts.module.scss';
+}
