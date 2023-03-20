@@ -1,3 +1,5 @@
+@use '@/styles/variables.module' as v;
+
 .module {
   display: flex;
   align-items: center;
@@ -35,4 +37,10 @@
   color: var(--c-primary-content);
   background-color: transparent;
   border: none;
+
+  @include v.mq(sm) {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
