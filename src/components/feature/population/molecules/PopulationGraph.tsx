@@ -8,12 +8,11 @@ import type { GraphProps } from '@/components/base/molecules/Graph';
 import { Graph } from '@/components/base/molecules/Graph';
 
 import {
-  populationsArrayState,
+  checkedPrefecturesPopulationsArrayState,
   populationYearsState,
   selectedPopulationTypeState,
 } from '@/stores/population/selectors';
 import { populationTypeToLabel } from '@/stores/population/types';
-import { checkedPrefecturesState } from '@/stores/prefecture/selectors';
 
 export type PopulationGraphPresenterProps = GraphProps;
 
@@ -27,11 +26,6 @@ export const PopulationGraphPresenter = ({
 };
 
 export const PopulationGraph = () => {
-  // 選択されている都道府県の一覧
-  const checkedPrefectures = useAtomValue(
-    useMemo(() => checkedPrefecturesState, [])
-  );
-
   // 選択されている人口情報
   const selectedPopulationType = useAtomValue(
     useMemo(() => selectedPopulationTypeState, [])
@@ -46,10 +40,7 @@ export const PopulationGraph = () => {
 
   // 人口構成データの一覧
   const populationsArray = useAtomValue(
-    useMemo(
-      () => populationsArrayState(checkedPrefectures),
-      [checkedPrefectures]
-    )
+    useMemo(() => checkedPrefecturesPopulationsArrayState, [])
   );
 
   // 有効な人口構成データの一覧
