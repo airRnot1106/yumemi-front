@@ -14,7 +14,10 @@ import {
   populationLabelToType,
   populationsResponseSchema,
 } from '@/stores/population/types';
-import { prefecturesState } from '@/stores/prefecture/selectors';
+import {
+  checkedPrefecturesState,
+  prefecturesState,
+} from '@/stores/prefecture/selectors';
 import type { PrefectureCode } from '@/stores/prefecture/types';
 
 // 選択された人口情報の種類を取得するatom
@@ -155,4 +158,15 @@ export const populationsArrayState = atomFamily(
       );
       return populationsArray;
     })
+);
+
+// 選択されている都道府県の人口構成を取得するatom
+export const checkedPrefecturesPopulationsArrayState = atomWithCache(
+  async (get) => {
+    const checkedPrefectures = get(checkedPrefecturesState);
+    const populationsArray = await get(
+      populationsArrayState(checkedPrefectures)
+    );
+    return populationsArray;
+  }
 );
