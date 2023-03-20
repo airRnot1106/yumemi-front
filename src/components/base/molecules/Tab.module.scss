@@ -9,6 +9,10 @@
   border-right: 1px solid var(--c-primary);
   border-bottom: 1px solid var(--c-primary);
 
+  &:global(.active) {
+    background-color: var(--c-primary);
+  }
+
   &:first-child {
     border-left: 1px solid var(--c-primary);
     border-top-left-radius: 0.5rem;
@@ -23,10 +27,6 @@
   &:hover {
     background-color: var(--c-primary-focus);
   }
-}
-
-:global(.active) {
-  background-color: var(--c-primary);
 }
 
 .button {
