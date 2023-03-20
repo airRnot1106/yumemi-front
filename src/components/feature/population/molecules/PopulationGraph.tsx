@@ -66,10 +66,12 @@ export const PopulationGraph = () => {
   };
 
   const series: GraphProps['series'] = validPopulationsArray.map(
-    (populations) => ({
-      name: populations.prefecture.prefName,
-      data: populations.data.get(selectedPopulationType) ?? [],
-    })
+    (populations) => {
+      return {
+        name: populations.prefecture.prefName,
+        data: [...(populations.data.get(selectedPopulationType) ?? [])],
+      };
+    }
   );
 
   return (

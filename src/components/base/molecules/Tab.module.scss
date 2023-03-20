@@ -1,3 +1,5 @@
+@use '@/styles/variables.module' as v;
+
 .module {
   display: flex;
   align-items: center;
@@ -8,6 +10,10 @@
   border-top: 1px solid var(--c-primary);
   border-right: 1px solid var(--c-primary);
   border-bottom: 1px solid var(--c-primary);
+
+  &:global(.active) {
+    background-color: var(--c-primary);
+  }
 
   &:first-child {
     border-left: 1px solid var(--c-primary);
@@ -25,14 +31,16 @@
   }
 }
 
-:global(.active) {
-  background-color: var(--c-primary);
-}
-
 .button {
   composes: text-xl from '@/styles/texts.module.scss';
   padding: 0.75rem 1rem;
   color: var(--c-primary-content);
   background-color: transparent;
   border: none;
+
+  @include v.mq(sm) {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }

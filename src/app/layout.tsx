@@ -1,9 +1,12 @@
 'use client';
 
 import '@/app/globals.scss';
-
 import { Provider } from 'jotai';
 
+import styles from '@/app/layout.module.scss';
+
+import { SiteFooter } from '@/components/feature/site/molecules/SiteFooter';
+import { SiteHeader } from '@/components/feature/site/molecules/SiteHeader';
 import { DebugAtoms } from '@/components/functional/DebugAtoms';
 
 export default function RootLayout({
@@ -21,7 +24,13 @@ export default function RootLayout({
       <body>
         <Provider>
           <DebugAtoms />
-          {children}
+          <div className={styles['header']}>
+            <SiteHeader />
+          </div>
+          <div className={styles['main']}>{children}</div>
+          <div className={styles['footer']}>
+            <SiteFooter />
+          </div>
         </Provider>
       </body>
     </html>

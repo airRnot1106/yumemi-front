@@ -162,7 +162,7 @@ module.exports = {
             target: './src/components/feature',
           },
           {
-            from: ['./src/components/page'],
+            from: ['./src/components/page/*.tsx'],
             target: './src/components/page',
           },
           {
