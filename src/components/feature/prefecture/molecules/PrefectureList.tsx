@@ -37,7 +37,9 @@ export const PrefectureList = () => {
   } else {
     return (
       <div>
-        <p>都道府県一覧の取得に失敗しました。</p>
+        <p className={styles['text-failed']}>
+          都道府県一覧の取得に失敗しました。
+        </p>
       </div>
     );
   }
