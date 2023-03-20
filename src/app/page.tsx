@@ -1,3 +1,9 @@
+import { Index } from '@/components/page';
+
 export default function Home() {
-  return <main></main>;
+  return (
+    <main>
+      <Index />
+    </main>
+  );
 }
