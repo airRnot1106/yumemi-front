@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useMemo } from 'react';
+import { useMemo } from 'react';
 
 import { useAtomValue } from 'jotai';
 
@@ -33,17 +33,7 @@ export const PrefectureList = () => {
 
   if (prefecturesResult.ok) {
     const prefectures = Object.values(prefecturesResult.value);
-    return (
-      <Suspense
-        fallback={
-          <div>
-            <p>loading...</p>
-          </div>
-        }
-      >
-        <PrefectureListPresenter prefectures={prefectures} />
-      </Suspense>
-    );
+    return <PrefectureListPresenter prefectures={prefectures} />;
   } else {
     return (
       <div>
