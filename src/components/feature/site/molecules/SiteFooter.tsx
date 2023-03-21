@@ -12,6 +12,7 @@ export const SiteFooterPresenter = ({ content }: SiteFooterPresenterProps) => {
   );
 };
 
+// Footer
 export const SiteFooter = () => {
   return <SiteFooterPresenter content="@airRnot" />;
 };
