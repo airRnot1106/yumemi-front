@@ -1,38 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+<samp>
 
-## Getting Started
+# Yumemi-Front
 
-First, run the development server:
+## Code checking of front-end
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+</samp>
+</div>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technology
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js
+- Highcharts
+- SCSS
+- Jotai
+- zod
+- ESLint
+- Prettier
+- Storybook
+- Vitest
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Directory Structure
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### app
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Next.js v13 から追加された`App Directory`のためのディレクトリ
 
-## Learn More
+### components
 
-To learn more about Next.js, take a look at the following resources:
+BCD Design をもとに考えた BF(Base - Feature) Design を採用
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+単一的なものが atoms で、複合的なものが molecules
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### base
 
-## Deploy on Vercel
+基礎的な機能を表すコンポーネント
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### feature
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+機能を表すまとまり。コンポーネントや`hook`などが含まれる
+
+#### functional
+
+どの要素にも属さない、特定の処理を行うだけのコンポーネント
+
+#### page
+
+ページを表すコンポーネント。`app/page`はこれのみを扱う
+
+### styles
+
+汎用的な Style を定義するディレクトリ
+
+### types
+
+汎用的な型を定義するディレクトリ
+
+### libs
+
+ライブラリの設定を行うディレクトリ
+
+### stores
+
+`jotai`を用いた状態管理を行うディレクトリ
+
+## Author
+
+- Github: [airRnot1106](https://github.com/airRnot1106)
+- NPM: [airrnot1106](https://www.npmjs.com/~airrnot1106)
+- Mastodon: [@airRnot@mstdn.jp](https://mstdn.jp/@airRnot)
+- Misskey: [@bot@misskey.dev](https://misskey.dev/@bot)
+- Nostr: npub168ecu95z2r6phu9m89xcegmm6sp8mdal2twdxkm4uzua5u97jnzspnu2ku
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/airRnot1106/yumemi-front/blob/main/LICENSE) file for details.
