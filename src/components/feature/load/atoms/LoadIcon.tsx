@@ -8,6 +8,7 @@ export const LoadIconPresenter = () => {
   );
 };
 
+// ローディングアイコン
 export const LoadIcon = () => {
   return <LoadIconPresenter />;
 };

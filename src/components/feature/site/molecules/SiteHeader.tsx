@@ -14,6 +14,7 @@ export const SiteHeaderPresenter = ({ title }: SiteHeaderPresenterProps) => {
   );
 };
 
+// Header
 export const SiteHeader = () => {
   return <SiteHeaderPresenter title="Yumemi-Front" />;
 };

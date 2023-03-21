@@ -25,6 +25,7 @@ export const PopulationTabPresenter = ({
   return <Tab items={items} activeValue={activeValue} onClick={onClick} />;
 };
 
+// 人口情報切り替え用のタブ
 export const PopulationTab = () => {
   const items = populationTypes.map((type) => ({
     label: populationTypeToLabel[type],
