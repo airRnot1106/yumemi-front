@@ -1,0 +1,30 @@
+@import '@acab/reset.css';
+
+:root {
+  --c-primary: #4768fa;
+  --c-primary-focus: #153ff9;
+  --c-primary-content: #161827;
+  --c-secondary: #7b92b2;
+  --c-secondary-focus: #5b769a;
+  --c-secondary-content: #161827;
+  --c-accent: #67cba0;
+  --c-accent-focus: #41be88;
+  --c-accent-content: #161827;
+  --c-neutral: #161827;
+  --c-neutral-focus: #06060a;
+  --c-neutral-content: #eaf0f6;
+  --c-base-100: #fff;
+  --c-base-200: #f7fafd;
+  --c-base-300: #eaf0f6;
+  --c-base-content: #161827;
+  --c-info: #1c92f2;
+  --c-success: #009485;
+  --c-warning: #f90;
+  --c-error: #ff5724;
+
+  color-scheme: light;
+}
+
+body {
+  color: #333;
+}

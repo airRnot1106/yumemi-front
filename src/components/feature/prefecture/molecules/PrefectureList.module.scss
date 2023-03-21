@@ -1,0 +1,12 @@
+.module {
+  padding-left: 0;
+}
+
+.list {
+  list-style: none;
+}
+
+.text-failed {
+  composes: text-xl from '@/styles/texts.module.scss';
+  color: var(--c-error);
+}
