@@ -14,6 +14,7 @@ export const PrefectureCardPresenter = () => {
   );
 };
 
+// 都道府県チェックボックス表示用カード
 export const PrefectureCard = () => {
   return <PrefectureCardPresenter />;
 };
