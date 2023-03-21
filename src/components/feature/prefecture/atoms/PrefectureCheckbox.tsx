@@ -27,11 +27,14 @@ export type PrefectureCheckboxProps = {
   prefecture: Prefecture;
 };
 
+// 都道府県チェックボックス
 export const PrefectureCheckbox = ({ prefecture }: PrefectureCheckboxProps) => {
   const { prefCode, prefName } = prefecture;
 
+  // チェックボックスのラベル
   const label = prefName;
 
+  // チェックされている都道府県の一覧
   const checkedPrefectures = useAtomValue(
     useMemo(() => checkedPrefecturesState, [])
   );
