@@ -25,6 +25,7 @@ export const PopulationGraphPresenter = ({
   return <Graph title={title} xAxis={xAxis} yAxis={yAxis} series={series} />;
 };
 
+// 人口構成グラフ
 export const PopulationGraph = () => {
   // 選択されている人口情報
   const selectedPopulationType = useAtomValue(
