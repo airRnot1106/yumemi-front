@@ -28,6 +28,7 @@ export const PrefectureListPresenter = ({
   );
 };
 
+// 都道府県チェックボックス一覧
 export const PrefectureList = () => {
   const prefecturesResult = useAtomValue(useMemo(() => prefecturesState, []));
 
