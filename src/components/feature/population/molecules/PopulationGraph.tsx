@@ -6,6 +6,7 @@ import { useAtomValue } from 'jotai';
 
 import type { GraphProps } from '@/components/base/molecules/Graph';
 import { Graph } from '@/components/base/molecules/Graph';
+import styles from '@/components/feature/population/molecules/PopulationGraph.module.scss';
 
 import {
   checkedPrefecturesPopulationsArrayState,
@@ -52,7 +53,9 @@ export const PopulationGraph = () => {
   if (!populationYears.ok) {
     return (
       <div>
-        <p>人口構成の年一覧の取得に失敗しました。</p>
+        <p className={styles['text-failed']}>
+          人口構成の年一覧の取得に失敗しました。
+        </p>
       </div>
     );
   }
